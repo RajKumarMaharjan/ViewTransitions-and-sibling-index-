@@ -8,6 +8,13 @@ section {
 }
 
 .grid-auto-fill {
+    --auto-fill-min-width: 320px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill,
+            minmax(min(var(--auto-fill-min-width), 100%), 1fr));
+    gap: var(--equal-columns-gap, 1rem);
+
     &[data-gap='large'] {
         --equal-columns-gap: 2rem;
     }
@@ -17,16 +24,6 @@ section {
     }
 
     &[data-gap='small'] {
-        --equal-columns-gap: .5rem;
+        --equal-columns-gap: 0.5rem;
     }
-}
-
-.grid-auto-fill {
-    --auto-fill-min-width: attr(data-min-width-px px, 320px);
-
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fill,
-            minmax(min(var(--auto-fill-min-width), 100%), 1fr));
-    gap: var(--equal-columns-gap, 1rem);
 }
