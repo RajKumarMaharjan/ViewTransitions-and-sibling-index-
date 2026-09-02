@@ -1,0 +1,29 @@
+form {
+    padding-block: 1rem;
+
+    select {
+        width: 18ch;
+        margin: 0;
+        padding: .75rem 1rem;
+        font-weight: 400;
+        background-color: hsl(0deg 0% 90%);
+        border: none;
+        border-radius: .25rem;
+        cursor: pointer;
+
+        option {
+            display: flex;
+            gap: .35rem;
+            padding: .75rem;
+        }
+
+        &:open::picker-icon {
+            rotate: 180deg;
+        }
+    }
+
+    select,
+    ::picker(select) {
+        appearance: base-select;
+    }
+}
