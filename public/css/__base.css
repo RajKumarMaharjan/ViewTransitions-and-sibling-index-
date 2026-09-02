@@ -1,0 +1,17 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-inline: 1rem;
+    padding-block: .75rem;
+    cursor: pointer;
+}
