@@ -1,0 +1,44 @@
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.35s;
+    animation-timing-function: ease-out;
+}
+
+.card {
+    view-transition-name: match-element;
+    padding-block: .75rem 1.75rem;
+    padding-inline: 1.5rem;
+    background-color: hsl(0deg 0% 90%);
+
+    .card-title {
+        font-weight: 300;
+        font-size: 1.1rem;
+        margin-block-end: .75rem;
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        background-color: darkslateblue;
+    }
+
+    animation-name: fade-in;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-delay: calc(.05s * sibling-index());
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
