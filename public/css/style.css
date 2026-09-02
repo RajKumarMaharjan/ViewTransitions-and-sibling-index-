@@ -1,4 +1,5 @@
 @import './__reset.css';
 @import './__font.css';
-@import './__dropdown.css';
+@import './__components.css';
 @import './__base.css';
+@import './__layout.css';
